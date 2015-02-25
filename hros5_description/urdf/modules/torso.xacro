@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+	<!-- DUMMY ROOT LINK -->
+	<link name="base_link"/>
+	<joint name="fixed-base" type="fixed">
+		<parent link="base_link"/>
+		<child link="torso"/>
+	</joint>
+	<!-- TORSO -->
+	<link name="torso">
+		<xacro:visuals_collisions_torso/>
+	</link>
+</robot>

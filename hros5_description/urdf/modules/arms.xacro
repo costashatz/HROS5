@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+	<xacro:macro name="arms_links_joints" params="side reflect">
+		<joint name="${side}ShoulderPitch" type="continuous">
+			<parent link="base_link"/>
+			<child link="${side}Shoulder"/>
+			<!-- <origin xyz="-0.001114 0.079433 0.072086" rpy="0 0 0"/> -->
+			<origin xyz="0.003 ${reflect*0.0675} 0.084" rpy="0 0 0"/>
+			<axis xyz="0 1 0"/>
+		</joint>
+		<link name="${side}Shoulder">
+			<xacro:visuals_collisions_shoulder side="${side}" reflect="${reflect}"/>
+		</link>
+		<joint name="${side}ShoulderRoll" type="continuous">
+			<parent link="${side}Shoulder"/>
+			<child link="${side}UpperArm"/>
+			<origin xyz="0.002 ${reflect*0.03} -0.03" rpy="${reflect*0.174532925} 0 0"/>
+			<axis xyz="1 0 0"/>
+		</joint>
+		<link name="${side}UpperArm">
+			<xacro:visuals_collisions_upper_arm side="${side}" reflect="${reflect}"/>
+		</link>
+		<joint name="${side}ElbowPitch" type="continuous">
+			<parent link="${side}UpperArm"/>
+			<child link="${side}LowerArm"/>
+			<origin xyz="0.03 ${reflect*-0.0015} -0.085" rpy="0 0 0"/>
+			<axis xyz="0 1 0"/>
+		</joint>
+		<link name="${side}LowerArm">
+			<xacro:visuals_collisions_lower_arm side="${side}" reflect="${reflect}"/>
+		</link>
+	</xacro:macro>
+
+	<xacro:arms_links_joints reflect="1" side="L"/>
+	<xacro:arms_links_joints reflect="-1" side="R"/>
+
+</robot>
