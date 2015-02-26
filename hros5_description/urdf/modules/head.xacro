@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-	<joint name="HeadYaw" type="continuous">
+	<joint name="HeadYaw" type="revolute">
 		<parent link="base_link"/>
 		<child link="LowerHead"/>
 		<!-- <origin xyz="-0.00661 -0.014699 0.16054" rpy="0 0 0"/> -->
 		<origin xyz="0.0035 0 0.1115" rpy="0 0 0"/>
 		<axis xyz="0 0 1"/>
-		<!-- <limit lower="-1.22173048" upper="1.22173048" effort="10" velocity="2"/> -->
+		<limit lower="-1.22173048" upper="1.22173048" effort="2.5" velocity="5.759586525"/>
 	</joint>
 	<link name="LowerHead">
 		<xacro:visuals_collisions_lower_head/>
@@ -17,7 +17,7 @@
 		<child link="UpperHeadBase"/>
 		<origin xyz="-0.01 0 0.049" rpy="0 0 0"/>
 		<axis xyz="0 1 0"/>
-		<limit upper="0.4" lower="-0.25" effort="10" velocity="2"/>
+		<limit upper="0.4" lower="-0.25" effort="2.5" velocity="5.759586525"/>
 	</joint>
 	<link name="UpperHeadBase">
 		<xacro:visuals_collisions_upper_head_base/>

@@ -2,12 +2,13 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
 	<xacro:macro name="arms_links_joints" params="side reflect">
-		<joint name="${side}ShoulderPitch" type="continuous">
+		<joint name="${side}ShoulderPitch" type="revolute">
 			<parent link="base_link"/>
 			<child link="${side}Shoulder"/>
 			<!-- <origin xyz="-0.001114 0.079433 0.072086" rpy="0 0 0"/> -->
 			<origin xyz="0.003 ${reflect*0.0675} 0.084" rpy="0 0 0"/>
 			<axis xyz="0 1 0"/>
+			<limit lower="-3.14159265" upper="3.14159265" effort="6.0" velocity="6.597344565"/>
 		</joint>
 		<link name="${side}Shoulder">
 			<xacro:visuals_collisions_shoulder side="${side}" reflect="${reflect}"/>
@@ -17,7 +18,7 @@
 			<child link="${side}UpperArm"/>
 			<origin xyz="0.002 ${reflect*0.03} -0.03" rpy="${reflect*0.174532925} 0 0"/>
 			<axis xyz="1 0 0"/>
-			<limit lower="${reflect*-2.35619449}" upper="${reflect*1.30899694}" effort="10" velocity="2"/>
+			<limit lower="${reflect*-2.35619449}" upper="${reflect*1.30899694}" effort="6.0" velocity="6.597344565"/>
 		</joint> -->
 		<link name="${side}UpperArm">
 			<xacro:visuals_collisions_upper_arm side="${side}" reflect="${reflect}"/>
@@ -27,7 +28,7 @@
 			<child link="${side}LowerArm"/>
 			<origin xyz="0.03 ${reflect*-0.0015} -0.085" rpy="0 0 0"/>
 			<axis xyz="0 1 0"/>
-			<limit lower="${reflect*-1.22173048}" upper="${reflect*1.65806279}" effort="10" velocity="2"/>
+			<limit lower="${reflect*-1.22173048}" upper="${reflect*1.65806279}" effort="6.0" velocity="6.597344565"/>
 		</joint>
 		<link name="${side}LowerArm">
 			<xacro:visuals_collisions_lower_arm side="${side}" reflect="${reflect}"/>
@@ -42,7 +43,7 @@
 		<child link="LUpperArm"/>
 		<origin xyz="0.002 0.03 -0.03" rpy="0.174532925 0 0"/>
 		<axis xyz="1 0 0"/>
-		<limit lower="-2.35619449" upper="1.30899694" effort="10" velocity="2"/>
+		<limit lower="-2.35619449" upper="1.30899694" effort="6.0" velocity="6.597344565"/>
 	</joint>
 
 	<joint name="RShoulderRoll" type="revolute">
@@ -50,7 +51,7 @@
 		<child link="RUpperArm"/>
 		<origin xyz="0.002 -0.03 -0.03" rpy="-0.174532925 0 0"/>
 		<axis xyz="1 0 0"/>
-		<limit lower="-1.30899694" upper="2.35619449" effort="10" velocity="2"/>
+		<limit lower="-1.30899694" upper="2.35619449" effort="6.0" velocity="6.597344565"/>
 	</joint>
 
 </robot>

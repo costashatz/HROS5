@@ -8,7 +8,7 @@
 			<!-- <origin xyz="-0.00145 0.048 -0.071931" rpy="0 0 0"/> -->
 			<origin xyz="0.0175 ${reflect*0.048} -0.063" rpy="0 0 0"/>
 			<axis xyz="0 0 1"/>
-			<limit lower="-0.523598776" upper="0.523598776" effort="10" velocity="2"/>
+			<limit lower="-0.523598776" upper="0.523598776" effort="8.4" velocity="4.712388975"/>
 		</joint>
 		<link name="${side}Hip">
 			<xacro:visuals_collisions_hip side="${side}"/>
@@ -19,7 +19,7 @@
 			<!-- <origin xyz="0.047519 0.048 -0.097025" rpy="0 0 0"/> 0.0033019-->
 			<origin xyz="-0.0675 0 -0.034" rpy="0 0 0"/>
 			<axis xyz="1 0 0"/>
-			<limit lower="-0.785398163" upper="0.785398163" effort="10" velocity="2"/>
+			<limit lower="-0.785398163" upper="0.785398163" effort="8.4" velocity="4.712388975"/>
 		</joint>
 		<link name="${side}HipMotors">
 			<xacro:visuals_collisions_hip_motors side="${side}"/>
@@ -29,7 +29,7 @@
 			<child link="${side}Thigh"/>
 			<origin xyz="0.0705 0 0" rpy="0 0 0"/>
 			<axis xyz="0 1 0"/>
-			<limit lower="-1.57079633" upper="1.57079633" effort="10" velocity="2"/>
+			<limit lower="-1.57079633" upper="1.57079633" effort="8.4" velocity="4.712388975"/>
 		</joint>
 		<link name="${side}Thigh">
 			<xacro:visuals_collisions_thigh side="${side}"/>
@@ -39,7 +39,7 @@
 			<child link="${side}Tibia"/>
 			<origin xyz="0.0017 0 -0.127" rpy="0 0 0"/>
 			<axis xyz="0 1 0"/>
-			<limit lower="-2.7925268" upper="2.7925268" effort="10" velocity="2"/>
+			<limit lower="-2.7925268" upper="2.7925268" effort="8.4" velocity="4.712388975"/>
 		</joint>
 		<link name="${side}Tibia">
 			<xacro:visuals_collisions_tibia side="${side}"/>
@@ -50,7 +50,7 @@
 			<origin xyz="-0.002 0 -0.125" rpy="0 0 0"/>
 			<!-- <origin xyz="0.024303 0.052837 -0.336141" rpy="0 0 0"/> -->
 			<axis xyz="0 1 0"/>
-			<limit lower="-1.57079633" upper="1.57079633" effort="10" velocity="2"/>
+			<limit lower="-1.57079633" upper="1.57079633" effort="8.4" velocity="4.712388975"/>
 		</joint>
 		<link name="${side}Ankle">
 			<xacro:visuals_collisions_ankle side="${side}"/>
@@ -60,7 +60,7 @@
 			<child link="${side}Foot"/>
 			<origin xyz="-0.07 0 0" rpy="0 0 0"/>
 			<axis xyz="1 0 0"/>
-			<limit lower="-0.785398163" upper="0.785398163" effort="10" velocity="2"/>
+			<limit lower="-0.785398163" upper="0.785398163" effort="8.4" velocity="4.712388975"/>
 		</joint>
 		<link name="${side}Foot">
 			<xacro:visuals_collisions_foot side="${side}"/>
