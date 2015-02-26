@@ -69,4 +69,34 @@
 
 	<xacro:legs_links_joints reflect="1" side="L"/>
 	<xacro:legs_links_joints reflect="-1" side="R"/>
+
+
+<!-- ROS REP LINKS -->
+	<joint name="l_ankle_joint" type="fixed">
+		<parent link="LAnkle"/>
+		<child link="l_ankle"/>
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+	</joint>
+	<link name="l_ankle"/>
+
+	<joint name="r_ankle_joint" type="fixed">
+		<parent link="RAnkle"/>
+		<child link="r_ankle"/>
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+	</joint>
+	<link name="r_ankle"/>
+
+	<joint name="l_sole_joint" type="fixed">
+		<parent link="LFoot"/>
+		<child link="l_sole"/>
+		<origin xyz="0.0565 0.007 -0.04" rpy="0 0 0"/>
+	</joint>
+	<link name="l_sole"/>
+
+	<joint name="r_sole_joint" type="fixed">
+		<parent link="RFoot"/>
+		<child link="r_sole"/>
+		<origin xyz="0.0565 -0.007 -0.04" rpy="0 0 0"/>
+	</joint>
+	<link name="r_sole"/>
 </robot>

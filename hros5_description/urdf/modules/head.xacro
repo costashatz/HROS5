@@ -44,4 +44,12 @@
 		<xacro:visuals_collisions_upper_head_back/>
 	</link>
 
+<!-- ROS REP LINKS -->
+	<joint name="gaze_joint" type="fixed">
+		<parent link="UpperHeadBase"/>
+		<child link="gaze"/>
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+	</joint>
+	<link name="gaze"/>
+
 </robot>

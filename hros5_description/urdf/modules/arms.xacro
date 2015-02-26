@@ -54,4 +54,20 @@
 		<limit lower="-1.30899694" upper="2.35619449" effort="6.0" velocity="6.597344565"/>
 	</joint>
 
+
+<!-- ROS REP LINKS -->
+	<joint name="l_wrist_joint" type="fixed">
+		<parent link="LLowerArm"/>
+		<child link="l_wrist"/>
+		<origin xyz="0 0 -0.0425" rpy="0 0 0"/>
+	</joint>
+	<link name="l_wrist"/>
+
+	<joint name="r_wrist_joint" type="fixed">
+		<parent link="RLowerArm"/>
+		<child link="r_wrist"/>
+		<origin xyz="0 0 -0.0425" rpy="0 0 0"/>
+	</joint>
+	<link name="r_wrist"/>
+
 </robot>
