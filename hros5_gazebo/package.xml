@@ -14,9 +14,9 @@ DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVI
 INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE 
 OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. -->
 <package>
-  <name>hros5_description</name>
+  <name>hros5_gazebo</name>
   <version>0.0.1</version>
-  <description>URDF for HR-OS5 Humanoid Robot Research Platform</description>
+  <description>Simulate HR-OS5 Humanoid Robot Research Platform in Gazebo simulator</description>
 
   <maintainer email="costashatz@gmail.com">Konstantinos Chatzilygeroudis</maintainer>
 
@@ -27,13 +27,14 @@ OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISE
 
   <author email="costashatz@gmail.com">Konstantinos Chatzilygeroudis</author>
 
+
   <buildtool_depend>catkin</buildtool_depend>
 
-  <run_depend>robot_state_publisher</run_depend>
-  <run_depend>joint_state_publisher</run_depend>
-  <run_depend>rviz</run_depend>
-  <run_depend>xacro</run_depend>
-  <run_depend>urdf</run_depend>
+  <build_depend>gazebo_ros</build_depend>
+
+  <run_depend>hros5_description</run_depend>
+  <run_depend>gazebo_ros</run_depend>
+  <run_depend>roboticsgroup_gazebo_plugins</run_depend>
 
 
   <export>
