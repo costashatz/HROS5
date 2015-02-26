@@ -3,7 +3,7 @@
 
 	<xacro:macro name="legs_links_joints" params="side reflect">
 		<joint name="${side}HipYaw" type="revolute">
-			<parent link="base_link"/>
+			<parent link="torso"/>
 			<child link="${side}Hip"/>
 			<!-- <origin xyz="-0.00145 0.048 -0.071931" rpy="0 0 0"/> -->
 			<origin xyz="0.0175 ${reflect*0.048} -0.063" rpy="0 0 0"/>
