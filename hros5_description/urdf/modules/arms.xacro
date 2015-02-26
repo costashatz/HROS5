@@ -12,20 +12,22 @@
 		<link name="${side}Shoulder">
 			<xacro:visuals_collisions_shoulder side="${side}" reflect="${reflect}"/>
 		</link>
-		<joint name="${side}ShoulderRoll" type="continuous">
+		<joint name="${side}ShoulderRoll" type="revolute">
 			<parent link="${side}Shoulder"/>
 			<child link="${side}UpperArm"/>
 			<origin xyz="0.002 ${reflect*0.03} -0.03" rpy="${reflect*0.174532925} 0 0"/>
 			<axis xyz="1 0 0"/>
+			<limit lower="${reflect*-2.35619449}" upper="${reflect*1.30899694}" effort="10" velocity="2"/>
 		</joint>
 		<link name="${side}UpperArm">
 			<xacro:visuals_collisions_upper_arm side="${side}" reflect="${reflect}"/>
 		</link>
-		<joint name="${side}ElbowPitch" type="continuous">
+		<joint name="${side}ElbowPitch" type="revolute">
 			<parent link="${side}UpperArm"/>
 			<child link="${side}LowerArm"/>
 			<origin xyz="0.03 ${reflect*-0.0015} -0.085" rpy="0 0 0"/>
 			<axis xyz="0 1 0"/>
+			<limit lower="${reflect*-1.22173048}" upper="${reflect*1.65806279}" effort="10" velocity="2"/>
 		</joint>
 		<link name="${side}LowerArm">
 			<xacro:visuals_collisions_lower_arm side="${side}" reflect="${reflect}"/>
