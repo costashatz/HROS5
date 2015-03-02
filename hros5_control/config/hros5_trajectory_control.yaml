@@ -6,7 +6,7 @@ hros5:
 
   # Controllers ------------------------------------------------
   Head_controller:
-    type: position_controllers/JointTrajectoryController
+    type: effort_controllers/JointTrajectoryController
     joints:
       - HeadYaw
       - HeadPitch
@@ -14,7 +14,7 @@ hros5:
       HeadYaw: {p: 100.0, i: 0.01, d: 10.0}
       HeadPitch: {p: 100.0, i: 0.01, d: 10.0}
   LeftArm_controller:
-    type: position_controllers/JointTrajectoryController
+    type: effort_controllers/JointTrajectoryController
     joints:
       - LShoulderPitch
       - LShoulderRoll
@@ -24,7 +24,7 @@ hros5:
       LShoulderRoll: {p: 100.0, i: 0.01, d: 10.0}
       LElbowPitch: {p: 100.0, i: 0.01, d: 10.0}
   RightArm_controller:
-    type: position_controllers/JointTrajectoryController
+    type: effort_controllers/JointTrajectoryController
     joints:
       - RShoulderPitch
       - RShoulderRoll
@@ -34,7 +34,7 @@ hros5:
       RShoulderRoll: {p: 100.0, i: 0.01, d: 10.0}
       RElbowPitch: {p: 100.0, i: 0.01, d: 10.0}
   LeftLeg_controller:
-    type: position_controllers/JointTrajectoryController
+    type: effort_controllers/JointTrajectoryController
     joints:
       - LHipYaw
       - LHipRoll
@@ -46,7 +46,7 @@ hros5:
       LHipPitch: {p: 100.0, i: 0.01, d: 10.0}
       LKneePitch: {p: 100.0, i: 0.01, d: 10.0}
   RightLeg_controller:
-    type: position_controllers/JointTrajectoryController
+    type: effort_controllers/JointTrajectoryController
     joints:
       - RHipYaw
       - RHipRoll
@@ -58,7 +58,7 @@ hros5:
       RHipPitch: {p: 100.0, i: 0.01, d: 10.0}
       RKneePitch: {p: 100.0, i: 0.01, d: 10.0}
   LeftFoot_controller:
-    type: position_controllers/JointTrajectoryController
+    type: effort_controllers/JointTrajectoryController
     joints:
       - LAnklePitch
       - LAnkleRoll
@@ -66,7 +66,7 @@ hros5:
       LAnklePitch: {p: 100.0, i: 0.01, d: 10.0}
       LAnkleRoll: {p: 100.0, i: 0.01, d: 10.0}
   RightFoot_controller:
-    type: position_controllers/JointTrajectoryController
+    type: effort_controllers/JointTrajectoryController
     joints:
       - RAnklePitch
       - RAnkleRoll

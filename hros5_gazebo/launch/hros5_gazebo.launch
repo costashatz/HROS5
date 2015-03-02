@@ -9,12 +9,12 @@
     <!-- more default parameters can be changed here -->
   </include>
 
-  <!-- Load PIDs -->
+  <!-- Load PIDs/ Not needed for effort controllers -->
   <!-- <rosparam file="$(find hros5_gazebo)/config/gazebo_ros_control_params.yaml" command="load"/> -->
 
   <!-- Call Nao Robot Trajectory Controller -->
   <include file="$(find hros5_control)/launch/hros5_trajectory_control.launch"/>
 
   <!-- Spawn a robot into Gazebo -->
-  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -x 0 -y 0 -z 0.339 -model hros5" />
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -x 0 -y 0 -z 0.39 -model hros5" />
 </launch>

@@ -37,7 +37,6 @@
 	<!-- UPPER HEAD VISUALS/COLLISIONS -->
 	<xacro:macro name="visuals_collisions_upper_head_base" params="">
 		<visual>
-			<!-- <origin xyz="-0.01175 -0.0025 0.033" rpy="0 0 0"/> -->
 			<origin xyz="0.0075 -0.0045 0.0275" rpy="0 0 0"/>
 			<geometry>
 				<mesh filename="package://hros5_description/meshes/endoskeleton/visual/UpperHeadBase.dae" scale="${scale} ${scale} ${scale}"/>
@@ -164,7 +163,6 @@
 	<!-- THIGH VISUALS/COLLISIONS -->
 	<xacro:macro name="visuals_collisions_thigh" params="side">
 		<visual>
-			<!-- <origin xyz="0.043764 0.038393 -0.188164" rpy="0 0 0"/> -->
 			<origin xyz="0.001 -0.0095 -0.095" rpy="0 0 0"/>
 			<geometry>
 				<mesh filename="package://hros5_description/meshes/endoskeleton/visual/Thigh.dae" scale="${scale} ${scale} ${scale}"/>
@@ -181,7 +179,6 @@
 	<!-- TIBIA VISUALS/COLLISIONS -->
 	<xacro:macro name="visuals_collisions_tibia" params="side">
 		<visual>
-			<!-- <origin xyz="0.041317 0.047709 -0.276974" rpy="0 0 0"/> -->
 			<origin xyz="0.004 0 -0.059" rpy="0 0 0"/>
 			<geometry>
 				<mesh filename="package://hros5_description/meshes/endoskeleton/visual/Tibia.dae" scale="${scale} ${scale} ${scale}"/>

@@ -9,5 +9,10 @@
 	<!-- TORSO -->
 	<link name="torso">
 		<xacro:visuals_collisions_torso/>
+		<inertial> <!-- Dummy values from Darwin OP -->
+			<origin xyz="-0.003053 -0.038651 -0.019268" />
+			<mass value="0.97559947"/>
+			<inertia ixx="3.1081800"  ixy="-0.25460189"  ixz="2.0318174" iyy="6.3787776" iyz="0.16417863" izz="5.3316425" />
+		</inertial>
 	</link>
 </robot>

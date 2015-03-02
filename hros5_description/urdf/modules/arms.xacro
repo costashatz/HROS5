@@ -5,26 +5,33 @@
 		<joint name="${side}ShoulderPitch" type="revolute">
 			<parent link="torso"/>
 			<child link="${side}Shoulder"/>
-			<!-- <origin xyz="-0.001114 0.079433 0.072086" rpy="0 0 0"/> -->
 			<origin xyz="0.003 ${reflect*0.0675} 0.084" rpy="0 0 0"/>
 			<axis xyz="0 1 0"/>
 			<limit lower="-3.14159265" upper="3.14159265" effort="6.0" velocity="6.597344565"/>
 		</joint>
 		<link name="${side}Shoulder">
 			<xacro:visuals_collisions_shoulder side="${side}" reflect="${reflect}"/>
+			<inertial> <!-- Dummy values from Darwin OP -->
+				<origin xyz="-0.013522619 0.010264050 0.0013935747" />
+				<mass value="0.025913024"/>
+				<inertia ixx="0.0097758165"  ixy="0.0016911839"  ixz="-0.00045174329" iyx="0.0016911839" iyy="0.010511104" iyz="0.00033406955" izx="-0.00045174329" izy="0.00033406955" izz="0.005476798" />
+		    </inertial>
 		</link>
-		<!-- <joint name="${side}ShoulderRoll" type="revolute">
-			<parent link="${side}Shoulder"/>
-			<child link="${side}UpperArm"/>
-			<origin xyz="0.002 ${reflect*0.03} -0.03" rpy="${reflect*0.174532925} 0 0"/>
-			<axis xyz="1 0 0"/>
-			<limit lower="${reflect*-2.35619449}" upper="${reflect*1.30899694}" effort="6.0" velocity="6.597344565"/>
-		</joint> -->
 		<link name="${side}UpperArm">
 			<xacro:visuals_collisions_upper_arm side="${side}" reflect="${reflect}"/>
+			<inertial> <!-- Dummy values from Darwin OP -->
+				<origin xyz="-0.036239 0.000734 0.000660" />
+				<mass value="0.16837715"/>
+				<inertia ixx="0.12202839"  ixy="-0.0020812626"  ixz="-0.00088143449" iyx="-0.0020812626" iyy="0.038088441" iyz="0.0018251448" izx="-0.00088143449" izy="0.0018251448" izz="0.11340830" />
+		    </inertial>
 		</link>
 		<link name="${side}LowerArm">
 			<xacro:visuals_collisions_lower_arm side="${side}" reflect="${reflect}"/>
+			<inertial> <!-- Dummy values from Darwin OP -->
+				<origin xyz="0.000000 0.000000 0.000000"/>
+				<mass value="0.059288504"/>
+				<inertia ixx="0.086855267"  ixy="0.0053020311"  ixz="0.00043636051" iyx="0.0053020311" iyy="0.021192085" iyz="-0.0064855932" izx="0.00043636051" izy="-0.0064855932" izz="0.086845450" />
+		    </inertial>
 		</link>
 	</xacro:macro>
 
