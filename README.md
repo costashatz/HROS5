@@ -45,7 +45,11 @@ roslaunch hros5_moveit_config moveit_planner.launch
 roslaunch hros5_gazebo hros5_gazebo.launch
 ```
 
+![Alt text](GazeboExample.png)
+
 This will **launch Gazebo Simulator** and **trajectory controllers** to simulate the real robot. You can use MoveIt to give trajectories to HR-OS5 to execute.
+
+![Alt text](GazeboExample2.png)
 
 License
 ----
