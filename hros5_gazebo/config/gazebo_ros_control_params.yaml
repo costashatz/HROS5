@@ -4,6 +4,10 @@ hros5/gazebo_ros_control/pid_gains:
 
   HeadPitch: {p: 100.0, i: 0.01, d: 10.0}
 
+  HeadPitchDummy: {p: 100.0, i: 0.01, d: 10.0}
+
+  HeadPitchDummy2: {p: 100.0, i: 0.01, d: 10.0}
+
   LShoulderPitch: {p: 100.0, i: 0.01, d: 10.0}
 
   LShoulderRoll: {p: 100.0, i: 0.01, d: 10.0}

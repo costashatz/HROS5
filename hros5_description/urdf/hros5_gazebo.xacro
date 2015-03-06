@@ -8,4 +8,21 @@
         </plugin>
     </gazebo>
 <!-- END OF GAZEBO ROS CONTROL PLUGIN -->
+
+<!-- MIMIC JOINTS  -->
+	<gazebo>
+		<plugin name="HeadPitchDummy" filename="libroboticsgroup_gazebo_mimic_joint_plugin.so">
+			<joint>HeadPitch</joint>
+			<mimicJoint>HeadPitchDummy</mimicJoint>
+			<multiplier>-1.0</multiplier>
+			<offset>0.0</offset>
+		</plugin>
+		<plugin name="HeadPitchDummy2" filename="libroboticsgroup_gazebo_mimic_joint_plugin.so">
+			<joint>HeadPitch</joint>
+			<mimicJoint>HeadPitchDummy2</mimicJoint>
+			<multiplier>0.65</multiplier>
+			<offset>0.0</offset>
+		</plugin>
+	</gazebo>
+<!-- END OF MIMIC JOINTS -->
 </robot>

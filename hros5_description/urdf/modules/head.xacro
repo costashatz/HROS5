@@ -40,6 +40,11 @@
 	</joint>
 	<link name="UpperHeadMotor">
 		<xacro:visuals_collisions_upper_head_motor/>
+		<inertial> <!-- dummy values for gazebo -->
+			<mass value="0.2e-5" />
+			<origin xyz="0 0 0"/>
+			<inertia ixx="1e-9" ixy="0" ixz="0" iyy="1e-9" iyz="0" izz="1e-9" />
+		</inertial>
 	</link>
 	<joint name="HeadPitchDummy2" type="continuous">
 		<parent link="LowerHead"/>
@@ -50,6 +55,11 @@
 	</joint>
 	<link name="UpperHeadBack">
 		<xacro:visuals_collisions_upper_head_back/>
+		<inertial> <!-- dummy values for gazebo -->
+			<mass value="0.2e-5" />
+			<origin xyz="0 0 0"/>
+			<inertia ixx="1e-9" ixy="0" ixz="0" iyy="1e-9" iyz="0" izz="1e-9" />
+		</inertial>
 	</link>
 
 <!-- ROS REP LINKS -->
