@@ -500,28 +500,28 @@
   <joint name="LShoulderRoll" type="revolute">
     <parent link="LShoulder"/>
     <child link="LUpperArm"/>
-    <origin rpy="0.174532925 0 0" xyz="0.002 0.03 -0.03"/>
+    <origin rpy="0.785398163395 0 0" xyz="0.002 0.03 -0.03"/>
     <axis xyz="1 0 0"/>
     <limit effort="6.0" lower="-2.35619449" upper="1.30899694" velocity="6.597344565"/>
   </joint>
   <joint name="RShoulderRoll" type="revolute">
     <parent link="RShoulder"/>
     <child link="RUpperArm"/>
-    <origin rpy="-0.174532925 0 0" xyz="0.002 -0.03 -0.03"/>
+    <origin rpy="-0.785398163395 0 0" xyz="0.002 -0.03 -0.03"/>
     <axis xyz="1 0 0"/>
     <limit effort="6.0" lower="-1.30899694" upper="2.35619449" velocity="6.597344565"/>
   </joint>
   <joint name="LElbowPitch" type="revolute">
     <parent link="LUpperArm"/>
     <child link="LLowerArm"/>
-    <origin rpy="0 0 0" xyz="0.03 -0.0015 -0.085"/>
+    <origin rpy="0 -0.785398163395 0" xyz="0.03 -0.0015 -0.085"/>
     <axis xyz="0 1 0"/>
     <limit effort="6.0" lower="-1.22173048" upper="1.65806279" velocity="6.597344565"/>
   </joint>
   <joint name="RElbowPitch" type="revolute">
     <parent link="RUpperArm"/>
     <child link="RLowerArm"/>
-    <origin rpy="0 0 0" xyz="0.03 -0.0015 -0.085"/>
+    <origin rpy="0 -0.785398163395 0" xyz="0.03 -0.0015 -0.085"/>
     <axis xyz="0 1 0"/>
     <limit effort="6.0" lower="-1.65806279" upper="1.22173048" velocity="6.597344565"/>
   </joint>
