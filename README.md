@@ -28,7 +28,7 @@ roslaunch hros5_moveit_config demo.launch
 
 *This will open up **rviz with the Navigation plugin configured** to give to a fake HR-OS5 trajectories to execute.
 
-![Alt text](MoveIt!Example.png)
+![Alt text](https://bitbucket.org/costashatz/hros5/raw/master/MoveIt!Example.png)
 
 ###Plan with MoveIt
 
@@ -38,18 +38,18 @@ roslaunch hros5_moveit_config moveit_planner.launch
 
 *This requires that you have connected to the Robot/Simulation* and will open up **rviz with the Navigation plugin configured** to give HR-OS5 trajectories to execute.
 
-![Alt text](MoveIt!Example2.png)
+![Alt text](https://bitbucket.org/costashatz/hros5/raw/master/MoveIt!Example2.png)
 
 ###Gazebo Simulation
 ```sh
 roslaunch hros5_gazebo hros5_gazebo.launch
 ```
 
-![Alt text](GazeboExample.png)
+![Alt text](https://bitbucket.org/costashatz/hros5/raw/master/GazeboExample.png)
 
 This will **launch Gazebo Simulator** and **trajectory controllers** to simulate the real robot. You can use MoveIt to give trajectories to HR-OS5 to execute.
 
-![Alt text](GazeboExample2.png)
+![Alt text](https://bitbucket.org/costashatz/hros5/raw/master/GazeboExample2.png)
 
 License
 ----
