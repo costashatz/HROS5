@@ -5,7 +5,7 @@
   <rosparam file="$(find hros5_control)/config/hros5_trajectory_control.yaml" command="load"/>
 
   <!-- load the controllers -->
-  <node name="nao_trajectory_controller" pkg="controller_manager" type="spawner" respawn="false"
+  <node name="hros5_trajectory_controller" pkg="controller_manager" type="spawner" respawn="false"
     output="screen" ns="/hros5" args="/hros5/RightArm_controller /hros5/LeftArm_controller /hros5/Head_controller /hros5/LeftLeg_controller /hros5/RightLeg_controller /hros5/LeftFoot_controller /hros5/RightFoot_controller  /hros5/joint_state_controller"/>
 
   <!-- convert joint states to TF transforms for rviz, etc -->

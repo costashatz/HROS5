@@ -27,8 +27,8 @@
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
     <end_effector name="left_eef" parent_link="l_wrist" group="left_arm" />
     <end_effector name="right_eef" parent_link="r_wrist" group="right_arm" />
-    <end_effector name="left_feef" parent_link="l_sole" group="left_leg" />
-    <end_effector name="right_feef" parent_link="r_sole" group="right_leg" />
+    <end_effector name="left_foot" parent_link="l_sole" group="left_leg" />
+    <end_effector name="right_foot" parent_link="r_sole" group="right_leg" />
     <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
     <virtual_joint name="virtual_joint" type="floating" parent_frame="odom" child_link="base_link" />
     <!--PASSIVE JOINT: Purpose: this element is used to mark joints that are not actuated-->
