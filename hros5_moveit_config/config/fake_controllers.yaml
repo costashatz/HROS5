@@ -4,8 +4,44 @@ controller_list:
       - LShoulderPitch
       - LShoulderRoll
       - LElbowPitch
+  - name: fake_left_arm_torso_controller
+    joints:
+      - LShoulderPitch
+      - LShoulderRoll
+      - LElbowPitch
+  - name: fake_head_controller
+    joints:
+      - HeadYaw
+      - HeadPitch
   - name: fake_right_arm_controller
     joints:
+      - RShoulderPitch
+      - RShoulderRoll
+      - RElbowPitch
+  - name: fake_right_arm_torso_controller
+    joints:
+      - RShoulderPitch
+      - RShoulderRoll
+      - RElbowPitch
+  - name: fake_whole_body_fixed_controller
+    joints:
+      - HeadYaw
+      - HeadPitch
+      - LHipYaw
+      - LHipRoll
+      - LHipPitch
+      - LKneePitch
+      - LAnklePitch
+      - LAnkleRoll
+      - LShoulderPitch
+      - LShoulderRoll
+      - LElbowPitch
+      - RHipYaw
+      - RHipRoll
+      - RHipPitch
+      - RKneePitch
+      - RAnklePitch
+      - RAnkleRoll
       - RShoulderPitch
       - RShoulderRoll
       - RElbowPitch
@@ -25,7 +61,11 @@ controller_list:
       - RKneePitch
       - RAnklePitch
       - RAnkleRoll
-  - name: fake_head_controller
+  - name: fake_upper_body_controller
     joints:
-      - HeadYaw
-      - HeadPitch
+      - LShoulderPitch
+      - LShoulderRoll
+      - LElbowPitch
+      - RShoulderPitch
+      - RShoulderRoll
+      - RElbowPitch
